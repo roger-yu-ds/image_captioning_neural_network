@@ -67,8 +67,8 @@ http://www.jair.org/papers/paper3994.html
 		└── raw
 			├── Flicker8k_Dataset
 			│
-			├── CrowdFlowerAnnotations.txt  <-
-			├── ExpertAnnotations.txt       <-
+			├── CrowdFlowerAnnotations.txt  <- the expert judgments
+			├── ExpertAnnotations.txt       <- the CrowdFlower judgments
 			├── Flickr_8k.devImages.txt     <- the validation set
 			├── Flickr_8k.testImages.txt    <- the test set
 			├── Flickr_8k.trainImages.txt   <- the training set
@@ -172,3 +172,10 @@ Other metrics that could be explored are:
 - [METEOR](https://en.wikipedia.org/wiki/METEOR) (Metric for Evaluation of Translation with Explicit ORdering)
 - [ROUGE](https://en.wikipedia.org/wiki/ROUGE_(metric))
 - [Word error rate (WER)](https://en.wikipedia.org/wiki/Word_error_rate)
+
+## Calculating BLEU
+See the [A Gentle Introduction to Calculating the BLEU Score for Text in Python](https://machinelearningmastery.com/calculate-bleu-score-for-text-python/)
+
+The `nltk` package has a module [nltk.translate.bleu_score](https://www.nltk.org/_modules/nltk/translate/bleu_score.html) that contains a couple of functions that calculate bleu scores:
+- `sentence_bleu()`
+- `corpus_bleu()`
